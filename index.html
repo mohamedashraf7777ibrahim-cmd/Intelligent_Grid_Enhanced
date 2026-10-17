@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Intelligent Grid — a strategic research website on AI-driven routing, dynamic logistics, operational performance, and supply-chain transformation.">
+  <meta name="theme-color" content="#07121e">
+  <title>The Intelligent Grid | Smart Logistics & Routing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="The Intelligent Grid home"><span class="brand-mark">↗</span> The Intelligent Grid</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav id="mainNav" aria-label="Main navigation">
+    <a href="#overview">Overview</a><a href="#architecture">Architecture</a><a href="#routing">Routing Models</a><a href="#performance">KPIs</a><a href="#lab">Live Lab</a><a href="#roadmap">Future</a>
+  </nav>
+  <a class="header-cta" href="#interactive">Explore the model <span>↗</span></a>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> INTELLIGENT LOGISTICS · STRATEGIC ADVANTAGE</div>
+    <h1>From route planning<br>to <span>intelligent movement.</span></h1>
+    <p class="hero-text">How AI-driven routing transforms logistics from a daily operational necessity into a connected, adaptive system for speed, cost control, reliability, and smarter supply-chain decisions.</p>
+    <div class="hero-actions"><a class="button button-primary" href="#overview">Explore the research <span>→</span></a><a class="button button-quiet" href="#architecture">Inside the system <span>↘</span></a></div>
+    <div class="hero-stats"><div><strong>01</strong><span>Sense the network</span></div><div><strong>02</strong><span>Optimize decisions</span></div><div><strong>03</strong><span>Learn continuously</span></div></div>
+  </div>
+  <div class="hero-visual">
+    <div class="visual-topline"><span>CONNECTED ROUTE NETWORK</span><span class="live"><i></i> CONCEPT MODEL</span></div>
+    <div class="map-panel">
+      <canvas class="route-map network-canvas" id="networkCanvas" role="img" aria-label="Animated illustrative logistics network. Click a network node to recalculate the highlighted delivery route."></canvas>
+      <div class="network-hud" aria-hidden="true"><span class="hud-dot"></span><span id="networkState">ROUTE ENGINE ACTIVE</span><b id="networkNodeCount">24 NODES</b></div>
+      <div class="map-label label-a"><span class="label-dot green"></span><div><small>DATA INPUT</small><strong>Connected network</strong></div></div>
+      <div class="map-label label-b"><span class="label-dot blue"></span><div><small>OPTIMIZED OUTPUT</small><strong>Adaptive delivery</strong></div></div>
+      <div class="map-legend"><span><i class="legend-line"></i> Adaptive route</span><span><i class="legend-node"></i> Live network node</span><span class="legend-hint">CLICK A NODE TO REROUTE ↗</span></div>
+    </div>
+    <div class="visual-caption"><span>ILLUSTRATIVE SYSTEM VISUAL</span><span>NOT LIVE GPS DATA</span></div>
+  </div>
+  <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+</section>
+<section class="ticker"><div class="ticker-track"><span>DYNAMIC ROUTING</span><b>✳</b><span>PREDICTIVE ANALYTICS</span><b>✳</b><span>FLEET UTILIZATION</span><b>✳</b><span>CONTINUOUS LEARNING</span><b>✳</b><span>DYNAMIC ROUTING</span><b>✳</b><span>PREDICTIVE ANALYTICS</span><b>✳</b></div></section>
+
+<section class="section intro-section" id="overview">
+  <div class="section-kicker">01 / EXECUTIVE OVERVIEW</div>
+  <div class="section-heading"><h2>Why routing needs<br><span>to become intelligent.</span></h2><p>Modern logistics faces a growing gap between customer expectations and traditional operating models. Intelligent routing helps organizations respond to complexity instead of relying only on fixed plans.</p></div>
+  <div class="intro-grid">
+    <article class="feature-card feature-main"><div class="feature-icon">⌁</div><div class="card-index">THE CENTRAL ARGUMENT</div><h3>Optimize the whole system.</h3><p>Traditional routing often starts with a fixed plan based on historical averages. Intelligent routing combines live and predictive information to update decisions as the network changes. The strategic goal is to balance speed, cost, and reliability rather than improving one metric while damaging another.</p><div class="card-bottom"><span>Speed</span><span>Cost</span><span>Reliability</span></div></article>
+    <article class="metric-card"><div class="metric-symbol">◷</div><span class="metric-label">CUSTOMER EXPECTATION</span><strong>Faster delivery</strong><p>Shorter lead times and narrower delivery windows create pressure on planning and execution.</p><div class="metric-line"><span style="width:76%"></span></div><small>Conceptual pressure indicator</small></article>
+    <article class="metric-card metric-blue"><div class="metric-symbol">◎</div><span class="metric-label">OPERATIONAL REALITY</span><strong>More variables</strong><p>Traffic, weather, vehicle capacity, driver hours, and changing orders all affect a workable route.</p><div class="data-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+  </div>
+  <div class="three-pillars"><div><span>01</span><strong>Speed</strong><small>Lead time and last-mile pace</small></div><div><span>02</span><strong>Cost</strong><small>Fuel, fleet use, and labor</small></div><div><span>03</span><strong>Reliability</strong><small>On-time delivery and order accuracy</small></div></div>
+</section>
+
+<section class="section dark-section" id="challenges">
+  <div class="section-kicker">02 / THE LOGISTICS PRESSURE</div>
+  <div class="section-heading"><h2>The last mile is<br><span>where plans get tested.</span></h2><p>The final stage of delivery is especially exposed to local traffic, failed delivery attempts, tight time windows, and costly exceptions.</p></div>
+  <div class="challenge-grid">
+    <article class="challenge-card"><span class="challenge-number">01</span><div class="challenge-icon">◷</div><h3>Time & traffic</h3><p>Conditions can change after a route is planned, making earlier estimates less useful.</p><span class="tag">LEAD TIME</span></article>
+    <article class="challenge-card"><span class="challenge-number">02</span><div class="challenge-icon">⌖</div><h3>Cost pressure</h3><p>Fuel, labor, vehicle wear, and avoidable mileage affect the cost of each delivery.</p><span class="tag">COST CONTROL</span></article>
+    <article class="challenge-card"><span class="challenge-number">03</span><div class="challenge-icon">▤</div><h3>Operational limits</h3><p>Vehicle capacity, driver hours, depot locations, and delivery windows constrain options.</p><span class="tag">CONSTRAINTS</span></article>
+    <article class="challenge-card"><span class="challenge-number">04</span><div class="challenge-icon">⟳</div><h3>Unexpected events</h3><p>Disruptions require dispatchers to revise plans quickly instead of relying on manual work alone.</p><span class="tag">EXCEPTIONS</span></article>
+  </div>
+</section>
+
+<section class="section architecture-section" id="architecture">
+  <div class="section-kicker">03 / SYSTEM ARCHITECTURE</div>
+  <div class="section-heading"><h2>Four layers. <span>One intelligent system.</span></h2><p>The research describes a flow from data collection to algorithmic decisions, operational execution, and measurable strategic outcomes.</p></div>
+  <div class="architecture-stack">
+    <article class="architecture-layer layer-outcome"><div class="layer-number">LAYER 04</div><div class="layer-icon">↗</div><div class="layer-copy"><h3>Strategic outcomes</h3><p>KPI achievement, customer satisfaction, and carbon reduction.</p></div><div class="layer-label">MEASURE</div></article>
+    <div class="layer-connector">↑ performance feedback</div>
+    <article class="architecture-layer layer-app"><div class="layer-number">LAYER 03</div><div class="layer-icon">▣</div><div class="layer-copy"><h3>Application & execution</h3><p>Automated vehicle scheduling, fleet utilization, and exception handling.</p></div><div class="layer-label">EXECUTE</div></article>
+    <div class="layer-connector">↑ optimized decisions</div>
+    <article class="architecture-layer layer-core"><div class="layer-number">LAYER 02</div><div class="layer-icon">⌘</div><div class="layer-copy"><h3>AI & algorithmic processing</h3><p>Machine-learning models, predictive analytics, and dynamic routing.</p></div><div class="layer-label">DECIDE</div></article>
+    <div class="layer-connector">↑ clean, connected signals</div>
+    <article class="architecture-layer layer-data"><div class="layer-number">LAYER 01</div><div class="layer-icon">⌁</div><div class="layer-copy"><h3>Data ingestion</h3><p>IoT sensors, real-time GPS, weather feeds, traffic APIs, and RFID.</p></div><div class="layer-label">SENSE</div></article>
+  </div>
+  <div class="note-box"><span class="note-icon">ⓘ</span><p><strong>System principle:</strong> intelligent routing transforms separate, fast-changing data streams into coordinated movement. Data quality and integration with existing systems are essential to making the decisions useful.</p></div>
+</section>
+
+<section class="section algorithm-section" id="routing">
+  <div class="section-kicker">04 / ROUTING MODELS</div>
+  <div class="section-heading"><h2>Static plans vs.<br><span>dynamic intelligence.</span></h2><p>Static routes can be easy to operate, but dynamic routing is designed to update the plan as new information becomes available.</p></div>
+  <div class="comparison-wrap"><table class="comparison-table"><thead><tr><th>Dimension</th><th>Static routing</th><th>AI-driven dynamic routing</th></tr></thead><tbody>
+    <tr><td>Route calculation</td><td>Fixed daily routes using historical averages</td><td>Routes recalculated as conditions change</td></tr>
+    <tr><td>Data inputs</td><td>Often limited to distance and stop count</td><td>Can combine traffic, weather, capacity, and driver hours</td></tr>
+    <tr><td>Disruptions</td><td>Dispatcher intervention may be required</td><td>Can recommend or automate re-routing</td></tr>
+    <tr><td>Last-mile efficiency</td><td>Fixed stop order can create backtracking</td><td>Stop sequence can be updated for delivery windows</td></tr>
+    <tr><td>Learning</td><td>May need manual review to adapt</td><td>Historical outcomes can inform future models</td></tr>
+  </tbody></table></div>
+  <div class="algorithm-list">
+    <article class="algorithm-item"><div class="algorithm-symbol">D<span>*</span></div><div class="algorithm-copy"><div class="algorithm-meta"><span>SHORTEST PATH</span><span class="algorithm-chip">GRAPH ALGORITHM</span></div><h3>Dijkstra’s Algorithm</h3><p>Finds a shortest path in a graph with non-negative edge weights. It can model road segments using distance, time, or another defined cost.</p></div><div class="algorithm-arrow">↗</div></article>
+    <article class="algorithm-item"><div class="algorithm-symbol">A<span>+</span></div><div class="algorithm-copy"><div class="algorithm-meta"><span>GOAL-DIRECTED SEARCH</span><span class="algorithm-chip">HEURISTIC SEARCH</span></div><h3>A* Search</h3><p>Uses the cost already travelled plus a heuristic estimate of the remaining cost to guide its search toward a destination.</p></div><div class="algorithm-arrow">↗</div></article>
+    <article class="algorithm-item"><div class="algorithm-symbol">VR</div><div class="algorithm-copy"><div class="algorithm-meta"><span>MULTI-STOP PLANNING</span><span class="algorithm-chip">OPTIMIZATION PROBLEM</span></div><h3>Vehicle Routing Problem (VRP)</h3><p>Plans routes for a fleet serving multiple customers under constraints such as vehicle capacity, depot locations, and delivery windows. Larger cases often need heuristics or optimization solvers.</p></div><div class="algorithm-arrow">↗</div></article>
+  </div>
+  <div class="note-box"><span class="note-icon">ⓘ</span><p><strong>Important distinction:</strong> finding the shortest path between two points is not the same as planning a fleet to serve many customers. Intelligent logistics often combines pathfinding with scheduling and vehicle-routing optimization.</p></div>
+</section>
+
+<section class="demo-section" id="interactive">
+  <div class="demo-glow"></div><div class="section-kicker">05 / INTERACTIVE EXPLORATION</div>
+  <div class="demo-heading"><div><h2>See a route plan<br><span>respond to a change.</span></h2><p>Choose a start and destination, then simulate a disruption. The example shows why a dynamic plan can differ from a fixed plan.</p></div><div class="demo-badge"><span class="pulse"></span> SAMPLE SIMULATION</div></div>
+  <div class="planner">
+    <div class="planner-controls"><label for="origin">Starting point</label><select id="origin"><option value="hub">Distribution Hub</option><option value="north">North District</option><option value="market">Central Market</option><option value="airport">Airport Depot</option></select><label for="destination">Destination</label><select id="destination"><option value="market">Central Market</option><option value="hub">Distribution Hub</option><option value="north">North District</option><option value="airport">Airport Depot</option></select><label class="toggle-label"><input type="checkbox" id="disruption"> Simulate a traffic disruption</label><button class="button button-primary calculate-btn" id="calculateRoute">Update sample route <span>→</span></button><p class="demo-disclaimer">Illustrative values only — no live traffic or map service is connected.</p></div>
+    <div class="planner-result"><div class="result-top"><span>ROUTE ESTIMATE</span><span class="result-status"><i></i> <span id="statusText">BASELINE PLAN</span></span></div><div class="result-path"><div class="path-point"><span class="point-icon start">A</span><div><small>FROM</small><strong id="fromName">Distribution Hub</strong></div></div><div class="path-line"><span></span><span></span><span></span></div><div class="path-point"><span class="point-icon end">B</span><div><small>TO</small><strong id="toName">Central Market</strong></div></div></div><div class="result-metrics"><div><span>EST. DISTANCE</span><strong id="distance">12.4 <small>km</small></strong></div><div><span>EST. DRIVE TIME</span><strong id="duration">28 <small>min</small></strong></div><div><span>SAMPLE COST*</span><strong id="cost">$6.20</strong></div></div><div class="result-foot" id="resultNote">Baseline sample route. Real values depend on road networks, traffic, and operating constraints.</div></div>
+  </div>
+</section>
+
+
+<section class="section lab-section" id="lab">
+  <div class="section-kicker">06 / DECISION LAB</div>
+  <div class="section-heading"><h2>Test the impact.<br><span>Compare the decisions.</span></h2><p>A transparent, illustrative scenario based on the research themes: fixed planning versus a route plan that responds to disruptions. Change the scenario and see the estimates update instantly.</p></div>
+  <div class="lab-grid">
+    <div class="lab-controls panel-surface">
+      <div class="panel-heading"><span class="panel-index">01</span><div><h3>Scenario controls</h3><p>Adjust operating conditions</p></div></div>
+      <label for="labStops">Number of delivery stops <output id="stopsOut">12</output></label><input id="labStops" type="range" min="4" max="30" value="12">
+      <label for="labTraffic">Disruption severity <output id="trafficOut">Medium</output></label><input id="labTraffic" type="range" min="0" max="3" value="2">
+      <label for="labCapacity">Vehicle capacity utilization <output id="capacityOut">75%</output></label><input id="labCapacity" type="range" min="40" max="100" step="5" value="75">
+      <button class="button button-primary calculate-btn" id="runLab">Run comparison <span>→</span></button>
+      <p class="demo-disclaimer">Model is illustrative, not a benchmark or live logistics system. Values are assumptions for classroom demonstration.</p>
+    </div>
+    <div class="lab-results">
+      <div class="lab-summary"><div><span>MODEL OUTPUT</span><strong id="labStatus">Ready to compare</strong></div><span class="lab-status-dot"></span></div>
+      <div class="compare-bars"><div class="bar-row"><div class="bar-label"><span>Static plan</span><strong id="staticHours">—</strong></div><div class="bar-track"><span id="staticBar"></span></div></div><div class="bar-row"><div class="bar-label"><span>Dynamic plan</span><strong id="dynamicHours">—</strong></div><div class="bar-track"><span id="dynamicBar"></span></div></div></div>
+      <div class="lab-metric-grid"><div><span>Estimated time saved</span><strong id="savedTime">—</strong></div><div><span>Potential fuel reduction</span><strong id="fuelSaved">—</strong></div><div><span>Stops in scenario</span><strong id="stopsMetric">12</strong></div></div>
+      <div class="lab-insight" id="labInsight">Run the model to compare a fixed route with an illustrative adaptive response.</div>
+    </div>
+  </div>
+  <div class="kpi-calculator panel-surface">
+    <div class="panel-heading"><span class="panel-index">02</span><div><h3>Transportation KPI calculator</h3><p>Use your own sample delivery counts</p></div></div>
+    <div class="kpi-inputs"><label for="ontimeInput">On-time deliveries<input id="ontimeInput" type="number" min="0" value="222" /></label><label for="totalInput">Total deliveries<input id="totalInput" type="number" min="1" value="250" /></label><label for="perfectInput">Perfect orders<input id="perfectInput" type="number" min="0" value="230" /></label><label for="ordersInput">Total orders<input id="ordersInput" type="number" min="1" value="250" /></label></div>
+    <div class="kpi-output"><div><span>On-time delivery rate</span><strong id="ontimeResult">88.8%</strong><small id="ontimeTarget">Calculated from your inputs</small></div><div><span>Complete order fill rate</span><strong id="fillResult">92.0%</strong><small id="fillTarget">Calculated from your inputs</small></div></div>
+    <p class="small-source-note">The supplied presentation assigns a 40% weight to each of these two metrics. These displayed rates are calculated from the entered counts; the remaining index design should be confirmed against the full assessment method.</p>
+  </div>
+</section>
+
+<section class="section performance-section" id="performance">
+  <div class="section-kicker">07 / MEASURE WHAT MATTERS</div>
+  <div class="section-heading"><h2>From route decisions<br><span>to measurable outcomes.</span></h2><p>Key Performance Indicators (KPIs) help teams see whether routing changes are improving service and operational efficiency.</p></div>
+  <div class="kpi-grid">
+    <article class="kpi-card"><div class="kpi-top"><span class="kpi-icon">◷</span><span class="kpi-type">CUSTOMER-FACING</span></div><h3>On-time delivery rate</h3><p>Percentage of deliveries completed within the promised delivery window.</p><div class="formula">(On-time deliveries ÷ Total deliveries) × 100</div><div class="kpi-weight"><span>Weight in research index</span><strong>40%</strong></div></article>
+    <article class="kpi-card"><div class="kpi-top"><span class="kpi-icon">✓</span><span class="kpi-type">CUSTOMER-FACING</span></div><h3>Complete order fill rate</h3><p>Percentage of orders delivered correctly, without missing items.</p><div class="formula">(Perfect orders ÷ Total orders) × 100</div><div class="kpi-weight"><span>Weight in research index</span><strong>40%</strong></div></article>
+    <article class="kpi-card"><div class="kpi-top"><span class="kpi-icon">▥</span><span class="kpi-type">OPERATIONAL</span></div><h3>Fleet utilization</h3><p>Tracks how effectively vehicle capacity and available working hours are used.</p><div class="formula">Compare productive use with available capacity</div><div class="kpi-weight"><span>Focus</span><strong>Efficiency</strong></div></article>
+    <article class="kpi-card"><div class="kpi-top"><span class="kpi-icon">↘</span><span class="kpi-type">OPERATIONAL</span></div><h3>Fuel & lead time</h3><p>Monitors transport spending and the time between order placement and delivery.</p><div class="formula">Track trend before and after route changes</div><div class="kpi-weight"><span>Focus</span><strong>Waste reduction</strong></div></article>
+  </div>
+  <p class="small-source-note">The research also discusses a transportation performance index. Its thresholds should be validated against the project’s actual business context before being treated as universal targets.</p>
+</section>
+
+<section class="section flywheel-section">
+  <div class="section-kicker">08 / THE LEARNING LOOP</div>
+  <div class="section-heading"><h2>A system that <span>gets smarter.</span></h2><p>Each completed route produces information that can improve future planning. This feedback loop connects technology with business results.</p></div>
+  <div class="flywheel-grid">
+    <article><span class="flywheel-num">01</span><div class="flywheel-icon">⌁</div><h3>Intelligent routing</h3><p>Algorithms process network variables and recommend routes.</p></article>
+    <div class="flywheel-arrow">→</div>
+    <article><span class="flywheel-num">02</span><div class="flywheel-icon">▣</div><h3>Operational efficiency</h3><p>Fleet use improves and exceptions can be handled faster.</p></article>
+    <div class="flywheel-arrow">→</div>
+    <article><span class="flywheel-num">03</span><div class="flywheel-icon">↗</div><h3>KPI performance</h3><p>Teams evaluate delivery reliability, cost, and customer outcomes.</p></article>
+    <div class="flywheel-arrow">→</div>
+    <article><span class="flywheel-num">04</span><div class="flywheel-icon">◉</div><h3>Better data capture</h3><p>Successes and failures reveal patterns for future decisions.</p></article>
+  </div>
+  <div class="loop-banner"><span class="pulse"></span> FEEDBACK RETURNS TO THE ROUTING MODEL — THE CYCLE CONTINUES</div>
+</section>
+
+<section class="section automation-section" id="automation">
+  <div class="section-kicker">09 / AUTOMATION STRATEGY</div>
+  <div class="section-heading"><h2>Build capability<br><span>in sensible stages.</span></h2><p>The research recommends a scalable approach: start with systems that improve visibility and coordination, then expand as the business case becomes clearer.</p></div>
+  <div class="automation-grid">
+    <article class="automation-card"><span class="stage">STAGE 01</span><h3>System automation</h3><p>Warehouse management systems, RF devices, pick-to-light, and voice-picking tools.</p><div class="stage-detail"><span>Estimated cost in source</span><strong>$0.5M–$2M</strong><span>Estimated payback in source</span><strong>0.5–2 years</strong></div></article>
+    <article class="automation-card"><span class="stage">STAGE 02</span><h3>Mechanized automation</h3><p>Conveyors and automated storage and retrieval systems (AS/RS).</p><div class="stage-detail"><span>Estimated cost in source</span><strong>$5M–$15M</strong><span>Estimated payback in source</span><strong>2–4 years</strong></div></article>
+    <article class="automation-card"><span class="stage">STAGE 03</span><h3>Sophisticated automation</h3><p>Automated guided vehicles, robotic picking, automatic sorters, and palletizers.</p><div class="stage-detail"><span>Estimated cost in source</span><strong>Over $50M</strong><span>Estimated payback in source</span><strong>Over 5 years</strong></div></article>
+  </div>
+  <p class="small-source-note">Cost and payback figures above are reproduced from the supplied presentation and are not universal market estimates. Actual values vary by site, scale, integration, and implementation scope.</p>
+</section>
+
+<section class="section future-section" id="roadmap">
+  <div class="section-kicker">10 / WHAT COMES NEXT</div>
+  <div class="section-heading"><h2>The next era of <span>intelligent logistics.</span></h2><p>The supplied research describes a progression toward greater visibility, predictive risk management, and increasingly autonomous networks.</p></div>
+  <div class="timeline">
+    <article><div class="timeline-dot"></div><div class="timeline-label">NEAR TERM</div><h3>Pervasive IoT visibility</h3><p>Vehicles, pallets, and warehouse nodes communicate status in near real time, improving transparency across the network.</p></article>
+    <article><div class="timeline-dot"></div><div class="timeline-label">MID TERM</div><h3>Generative AI for risk management</h3><p>Scenario simulation can help teams anticipate supply-chain disruptions and evaluate possible responses before they happen.</p></article>
+    <article><div class="timeline-dot"></div><div class="timeline-label">LONG TERM</div><h3>More autonomous networks</h3><p>Routing systems may become more tightly integrated with autonomous fleets and warehouse robotics where the technology and business case support it.</p></article>
+  </div>
+</section>
+
+<section class="section takeaway-section">
+  <div class="takeaway-card"><div class="takeaway-left"><div class="section-kicker">11 / CONCLUSION</div><h2>Don't just find a route.<br><span>Build a smarter network.</span></h2><p>Intelligent routing is more than a pathfinding feature. Connected data, adaptive algorithms, operational execution, and clear performance measures can work together to make logistics more responsive. The strongest strategy is to define the goal, integrate reliable data, measure results, and scale the solution in stages.</p><a href="#home" class="text-link">Back to the top ↑</a></div><div class="takeaway-right"><div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div><div class="orbit-center">AI</div><span class="orbit-point point-one">⌖</span><span class="orbit-point point-two">↗</span><span class="orbit-point point-three">✓</span><div class="orbit-caption">DATA + ALGORITHMS + EXECUTION</div></div></div>
+</section>
+
+<section class="section references-section" id="references">
+  <div class="section-kicker">12 / REFERENCES</div><div class="section-heading"><h2>Research basis & <span>further reading.</span></h2><p>The structure and main strategic themes on this website follow the supplied “The Intelligent Grid” presentation. External resources below add technical background.</p></div>
+  <div class="reference-list">
+    <a href="https://developers.google.com/optimization/routing" target="_blank" rel="noopener noreferrer"><span class="reference-num">01</span><span><strong>Vehicle Routing | OR-Tools</strong><small>Google for Developers · Routing optimization guide</small></span><span class="external">↗</span></a>
+    <a href="https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html" target="_blank" rel="noopener noreferrer"><span class="reference-num">02</span><span><strong>Dijkstra’s Algorithm Visualization</strong><small>University of San Francisco · Algorithm visualization</small></span><span class="external">↗</span></a>
+    <a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank" rel="noopener noreferrer"><span class="reference-num">03</span><span><strong>A* Search Algorithm</strong><small>Graph search and heuristic overview</small></span><span class="external">↗</span></a>
+    <a href="https://en.wikipedia.org/wiki/Vehicle_routing_problem" target="_blank" rel="noopener noreferrer"><span class="reference-num">04</span><span><strong>Vehicle Routing Problem</strong><small>Problem definition and common variants</small></span><span class="external">↗</span></a>
+  </div>
+  <p class="references-note">Academic note: the supplied PDF appears to be slide-based. Before final submission, add the course-required citation details, team members, instructor, and any required bibliography from your original research materials.</p>
+</section>
+</main>
+<footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">↗</span> The Intelligent Grid</a><p>Intelligent Logistics Strategy · University Research Website</p><a href="#home">Back to top ↑</a><span class="footer-line"></span><small>Educational project · Illustrative simulation · Research content based on the supplied presentation</small></footer>
+<script src="script.js"></script>
+</body>
+</html>
